@@ -1,5 +1,7 @@
-export function Header() {
+
+export default function Header() {
   return (
+    <>
     <nav className="navbar">
       <a href="#" className="navbar__logo" aria-label="Homepage logo">
         <i className="ri-code-s-slash-line"></i>
@@ -22,10 +24,12 @@ export function Header() {
 
       <article className="navbar__actions">
         <div className="navbar__location">
-          <h5>Brazil, São Paulo</h5>
+          <h5>Brazil, São Paulo, </h5>
         </div>
         <button className="btn">Get a Quote</button>
       </article>
     </nav>
+    </>
+    
   );
 }

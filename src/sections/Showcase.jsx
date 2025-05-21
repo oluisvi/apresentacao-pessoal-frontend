@@ -1,4 +1,4 @@
-export function Showcase() {
+export default function Showcase() {
   const projects = [
     {
       title: "Shop.co E-commerce",
@@ -36,30 +36,53 @@ export function Showcase() {
 
   return (
     <>
-      <div className="category__projects">
-        {projects.map((project, index) => (
-          <div className="project-card" key={index}>
-            <img
-              src={project.image}
-              alt={project.title}
-              className="project-card__image"
-            />
-            <div className="project-card__info">
-              <h5>{project.title}</h5>
-              <p>{project.date}</p>
-            </div>
-            <p className="project-card__desc">{project.description}</p>
-            <a
-              className="btn"
-              href={project.link}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Go to Project
-            </a>
-          </div>
-        ))}
+      <section className="showcase">
+      {/* Cabeçalho */}
+      <div className="showcase__header" id="showcase">
+        <h3>My Projects:</h3>
+        <button className="btn">See My Work</button>
       </div>
+
+      <div className="showcase_categories">
+        <section className="category">
+          {/* Descrição da categoria */}
+          <div className="category__header">
+            <div className="category__title">
+              <i className="ri-macbook-line"></i>
+              <h4>Portfolio Projects</h4>
+            </div>
+            <div className="category__desc">
+              <p>
+                Building interactive, visually and engaging user interfaces.
+              </p>
+              <a href="#"><i className="ri-share-circle-line"></i></a>
+            </div>
+          </div>
+
+          {/* Projetos renderizados dinamicamente */}
+          <div className="category__projects">
+            {projects.map((project, index) => (
+              <div className="project-card" key={index}>
+                <img src={project.image} alt={project.title} className="project-card__image" />
+                <div className="project-card__info">
+                  <h5>{project.title}</h5>
+                  <p>{project.date}</p>
+                </div>
+                <p className="project-card__desc">{project.description}</p>
+                <a
+                  className="btn"
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Go to Project
+                </a>
+              </div>
+            ))}
+          </div>
+        </section>
+      </div>
+    </section>
     </>
   );
 }

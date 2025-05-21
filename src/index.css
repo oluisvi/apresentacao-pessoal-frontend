@@ -152,11 +152,14 @@ html {
   border-radius: 10px;
 }
 
+.hero__content h1{
+  padding-top: 4%;
+}
+
 .hero__content h2 {
   font-size: 48px;
   line-height: 60px;
   font-weight: 400;
-  margin-top: 20px;
   width: 90%;
 }
 
@@ -178,10 +181,17 @@ html {
   margin-bottom: 30px;
 }
 
-.hero__actions,
-.skills__actions {
+.hero__actions{
   display: flex;
+  justify-content: space-around;
   gap: 10px;
+}
+
+.skills__actions{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+
 }
 
 .hero__actions .btn,
@@ -189,6 +199,7 @@ html {
   padding: 6px 20px;
   font-size: 12px;
   font-weight: 500;
+
 }
 
 .hero__socials {
@@ -212,11 +223,13 @@ html {
 }
 
 .skills {
-  padding: 60px;
+  padding-left: 6% ;
+  padding-right: 6%;
   display: flex;
   align-items: center;
   gap: 40px;
 }
+
 
 .skills__desc,
 .skills__stats {
@@ -236,8 +249,8 @@ html {
 .skills__desc p {
   color: #6b7280;
   font-size: 14px;
-  margin-bottom: 30px;
-}
+  font-weight: 500;
+  margin-bottom: 20px;}
 
 .skills__stats {
   display: grid;
@@ -258,7 +271,8 @@ html {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 20px;
+  max-width: 100%;
+  padding: 15%;
 }
 
 .skill__info h5 {
@@ -279,6 +293,8 @@ html {
 .showcase {
   padding: 80px 60px 50px;
   background: #e5e7eb;
+  margin-top: 5%;
+  border-radius: 2%;
 }
 
 .showcase__header {
@@ -308,6 +324,9 @@ html {
 .category__header {
   display: flex;
   align-items: center;
+}
+.category__header p{
+  padding-left: 25%;
 }
 
 .category__title,
@@ -405,6 +424,7 @@ html {
 }
 
 .project-card__desc {
+  text-align: left;
   font-size: 13px;
   color: #7a7a7a;
   margin-bottom: 30px;
@@ -434,7 +454,7 @@ html {
 
 .career__jobs,
 .career__awards {
-  width: 50%;
+  width: 60%;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -449,6 +469,7 @@ html {
 .job,
 .award {
   display: flex;
+  width: 100%;
   align-items: center;
   gap: 20px;
   padding-bottom: 20px;
@@ -526,8 +547,15 @@ html {
   color: #6b7280;
   font-size: 14px;
   font-weight: 500;
+  padding-top: 3%;
 }
-
+.contact a{
+  padding: 6px 20px;
+  border: 2px solid #1f2937;
+  border-radius: 0.4rem;
+  color: #fff;
+  background: #1f2937;
+  margin-bottom: 14px;}
 .contact p span {
   color: #1f2937;
   font-weight: 600;
@@ -539,7 +567,10 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 }
+
+
 
 @media screen and (max-width: 1230px) {
   .hero__image {
@@ -638,12 +669,17 @@ html {
   }
 
   .skills__desc,
-  .skills__stats,
   .category__title,
   .category__desc,
   .career__jobs,
   .career__awards {
-    width: 100%;
+    width: 80%;
+  }
+  .skills__stats{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 10%;
   }
 
   .skills__desc {
@@ -657,10 +693,12 @@ html {
 
   .showcase {
     padding: 80px 30px 100px;
+    border-radius: 1rem;
   }
 
   .category__header {
-    flex-direction: column;
+    width: 100%;
+    gap: 20px;
   }
 
   .category__title {
@@ -728,7 +766,22 @@ html {
   .project-card__image {
     height: 300px;
   }
+ .job, .award{
+  display: flex;
+  flex-direction: column;
+ }
 
+ .award{
+  display: flex;
+  flex: wrap;
+  width: 100%;
+  justify-content: center;
+  flex-direction: column;
+ }
+
+ .award .ri-external-link-line{
+  display: none;
+ }
   .career h3 {
     font-size: 26px;
   }

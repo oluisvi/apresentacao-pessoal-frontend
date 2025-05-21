@@ -1,16 +1,16 @@
-export function Hero() {
+/* eslint-disable react/no-unescaped-entities */
+
+
+export default function Hero() {
   return (
     <section className="hero" id="home" aria-label="Homepage hero section">
       <div className="hero__content">
         <figure className="hero__image-wrapper">
           <img
-            src="assets/profile.jpg"
+            src="../assets/profile.jpg"
             alt="Profile image of Luís Henrique"
             className="hero__image"
           />
-          <figcaption className="visually-hidden">
-            Luís Henrique's profile picture
-          </figcaption>
         </figure>
         <h1>Hello! I'm Luís Henrique</h1>
       </div>

@@ -1,4 +1,4 @@
-export function About() {
+export default function About() {
   return (
     <>
       <section className="skills" id="skills">
@@ -20,16 +20,16 @@ export function About() {
             <i className="ri-codepen-line"></i>
             <div className="skill__info">
               <h5>Creative</h5>
-              <p>JS Projects</p>
+              <p>JavaScript Projects</p>
             </div>
           </div>
 
           <div className="skill__item">
-            <i className="ri-reactjs-line"></i>
             <div className="skill__info">
               <h5>Designed</h5>
               <p>Remote Projects</p>
             </div>
+            <i className="ri-reactjs-line"></i>
           </div>
 
           <div className="skill__item">
@@ -41,11 +41,11 @@ export function About() {
           </div>
 
           <div className="skill__item">
-            <i className="ri-remote-control-line"></i>
             <div className="skill__info">
               <h5>Custom</h5>
               <p>Codepen Projects</p>
             </div>
+            <i className="ri-remote-control-line"></i>
           </div>
         </div>
       </section>

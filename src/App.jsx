@@ -1,14 +1,23 @@
-
+import Header from './sections/Header';
+import Hero from './sections/Hero';
+import About from './sections/About';
+import Showcase from './sections/Showcase';
+import Experience from './sections/Experience';
+import Contact from './sections/Contact';
+import Footer from './sections/Footer';
 import './App.css'
 
 function App() {
 
   return (
     <>
-      <main>
-        <h1>Seja bem vindo! :)</h1>
-        <p>Desafio de apresentação Pessoal do Projeto Frontend fusion</p>
-      </main>
+      <Header/>
+      <Hero/>
+      <About/>
+      <Showcase/>
+      <Experience/>
+      <Contact/>
+      <Footer/>
     </>
   );
 }
